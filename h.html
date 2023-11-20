@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navbar with Clickable Items</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    /* Define the styles for the navbar */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #333;
+}
+
+.navbar li {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Define the active class for selected items */
+.navbar li.active {
+    background-color: yellow;
+    color: #333;
+}
+
+</style>
+
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="www.google.com" id="item1">Item 1</a></li>
+        <li><a href="#" id="item2">Item 2</a></li>
+        <li><a href="#" id="item3">Item 3</a></li>
+        <li><a href="#" id="item4">Item 4</a></li>
+        <li><a href="#" id="item5">Item 5</a></li>
+    </ul>
+    <script src="script.js"></script>
+  <script>  $(document).ready(function () {
+        $("ul.navbar li").click(function () {
+            // Remove the 'active' class from all navbar list items
+            $("ul.navbar li").removeClass("active");
+    
+            // Add the 'active' class to the clicked navbar list item
+            $(this).addClass("active");
+        });
+    });</script>
+    
+</body>
+</html>
